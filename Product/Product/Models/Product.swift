@@ -14,7 +14,7 @@ struct Product: Codable {
     var imageUrls: [String]?
     var imageUrlsThumbnails: [String]?
     
-    //Coding Keys
+    // Coding Keys
     
     enum CodingKeys: String, CodingKey {
         

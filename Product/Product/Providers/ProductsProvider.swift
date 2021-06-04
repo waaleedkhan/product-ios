@@ -6,7 +6,13 @@ struct ProductsProvider {
     
     // MARK: - Members
     
-    let apiRepo: ProductsAPIRepository = ProductsAPIRepository()
+    private let apiRepo: ProductsAPIRepository
+    
+    // MARK: - Life Cycle Methods
+    
+    init(service: ProductService) {
+        self.apiRepo = ProductsAPIRepository(service: service)
+    }
     
     // MARK: - Provider Methods
     

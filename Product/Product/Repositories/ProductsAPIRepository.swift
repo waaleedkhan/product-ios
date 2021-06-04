@@ -2,7 +2,19 @@
 
 import Foundation
 
-struct ProductsAPIRepository {}
+struct ProductsAPIRepository {
+    
+    // MARK: - Members
+    
+    private let service: ProductServicing
+    
+    // MARK: - Life Cycle Methods
+    
+    init(service: ProductService) {
+        self.service = service
+    }
+    
+}
 
 // MARK: - Repository Implementation
 
@@ -12,6 +24,8 @@ extension ProductsAPIRepository: Repository {
     
     func delete() -> Product? { return nil }
     
-    func getAll(callback: ServiceResponse) {}
+    func getAll(callback: @escaping ServiceResponse) {
+        service.getAll(completion: callback)
+    }
     
 }

@@ -5,6 +5,6 @@ import Foundation
 enum Result {
     
     case success(Decodable?)
-    case failure(ErrorConvertible?)
+    case failure(Error?)
     
 }
