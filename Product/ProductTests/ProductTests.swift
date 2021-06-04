@@ -1,9 +1,9 @@
 //  Created on 6/4/21.
 
 import XCTest
-@testable import Products
+@testable import Product
 
-class ProductsTests: XCTestCase {
+class ProductTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
