@@ -54,6 +54,12 @@ Contains the Service implementation. HTTPServices contains all the API requests 
 **17. Utils**
 Contains Utility classes used within the App.
 
+**18. Repositoeis**
+Contains Repositories used in the app. These Repos will use Service classes to fetch Data.
+
+**19. Providers**
+Contains Providers used in the app. These providers will provide data from Repositories.
+
 ## Third party dependencies:
 - [SwiftLint](https://github.com/realm/SwiftLint) 0.42.2
     - for static code analysis
