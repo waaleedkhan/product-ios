@@ -8,7 +8,8 @@ protocol TableViewCellProtocol {
     associatedtype TYPE
     var model: TYPE? { get set }
     var indexPath: IndexPath? { get set }
-    func configureWithModel(_: TYPE, indexPath: IndexPath)
+    func configureWithModel(model: TYPE, indexPath: IndexPath)
+    
 }
 
 protocol TableViewCompatible {

@@ -10,9 +10,21 @@ class ProductListView: BaseView {
  
     // MARK: - Members
     
-    var viewModel: ProductsViewModel?
+    private var viewModel: ProductsViewModel?
+    private let kCellHeight: CGFloat = 94.0
+    
+    // MARK: - Life Cycle Methods
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initalizeTableView()
+    }
     
     // MARK: - Initialize
+    
+    private func initalizeTableView() {
+        
+    }
     
     func initializeData(viewModel: ProductsViewModel) {
         self.viewModel = viewModel
@@ -30,7 +42,7 @@ class ProductListView: BaseView {
             
             switch state {
             case .success:
-                print("Success")
+                self.refresh()
                 
             case .error(let error):
                 print(error?.localizedDescription ?? "")
@@ -38,6 +50,40 @@ class ProductListView: BaseView {
                 print("Default")
             }
         }
+    }
+    
+    private func refresh() {
+        self.tableView.reloadData()
+    }
+    
+}
+
+// MARK: - UITableView Datasource Methods
+
+extension ProductListView: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel?.getNumberOfProducts() ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let product = viewModel?.getProduct(indexPath: indexPath) else {
+            return UITableViewCell()
+        }
+        
+        let cell = product.cellForTableView(tableView: tableView, atIndexPath: indexPath, actionButtons: [])
+        
+        return cell
+    }
+    
+}
+
+// MARK: UITableView Delegate Methods
+
+extension ProductListView: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return kCellHeight
     }
     
 }

@@ -25,6 +25,9 @@
 		65CCB0FC266BB4AC00866EDA /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CCB0FB266BB4AC00866EDA /* TableView.swift */; };
 		65CCB101266BB54C00866EDA /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CCB100266BB54C00866EDA /* NibLoadable.swift */; };
 		65CCB109266BB57800866EDA /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CCB108266BB57800866EDA /* ReusableView.swift */; };
+		65CCB114266BC1BE00866EDA /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CCB112266BC1BE00866EDA /* ProductCell.swift */; };
+		65CCB115266BC1BE00866EDA /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65CCB113266BC1BE00866EDA /* ProductCell.xib */; };
+		65CCB11D266BC8D900866EDA /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CCB11C266BC8D900866EDA /* Date+Utils.swift */; };
 		65FDB0A9266A76A6000A3126 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FDB0A8266A76A6000A3126 /* Repository.swift */; };
 		65FDB0B2266A79B7000A3126 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FDB0B1266A79B7000A3126 /* Types.swift */; };
 		65FDB0BA266A79D5000A3126 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FDB0B9266A79D5000A3126 /* Enums.swift */; };
@@ -87,6 +90,9 @@
 		65CCB0FB266BB4AC00866EDA /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		65CCB100266BB54C00866EDA /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		65CCB108266BB57800866EDA /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		65CCB112266BC1BE00866EDA /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		65CCB113266BC1BE00866EDA /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		65CCB11C266BC8D900866EDA /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
 		65FDB0A8266A76A6000A3126 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		65FDB0B1266A79B7000A3126 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		65FDB0B9266A79D5000A3126 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
@@ -160,8 +166,9 @@
 		6588F66A266A42E700EFA8B7 /* Product */ = {
 			isa = PBXGroup;
 			children = (
-				65CCB0FA266BB48600866EDA /* Components */,
 				6588F69E266A435000EFA8B7 /* AppDelegate */,
+				65CCB110266BC19100866EDA /* Cells */,
+				65CCB0FA266BB48600866EDA /* Components */,
 				65FDB0B0266A79AA000A3126 /* Constants */,
 				65FDB0F5266A994A000A3126 /* Extenstions */,
 				65FDB0D2266A7BAC000A3126 /* Models */,
@@ -259,6 +266,23 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		65CCB110266BC19100866EDA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				65CCB111266BC1A000866EDA /* ProductCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		65CCB111266BC1A000866EDA /* ProductCell */ = {
+			isa = PBXGroup;
+			children = (
+				65CCB112266BC1BE00866EDA /* ProductCell.swift */,
+				65CCB113266BC1BE00866EDA /* ProductCell.xib */,
+			);
+			path = ProductCell;
+			sourceTree = "<group>";
+		};
 		65FDB0A7266A7684000A3126 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				65FDB0F6266A996C000A3126 /* Codable+Helper.swift */,
+				65CCB11C266BC8D900866EDA /* Date+Utils.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -470,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65CCB0E7266B9BB900866EDA /* ProductListView.xib in Resources */,
+				65CCB115266BC1BE00866EDA /* ProductCell.xib in Resources */,
 				6588F678266A42E800EFA8B7 /* LaunchScreen.storyboard in Resources */,
 				6588F675266A42E800EFA8B7 /* Assets.xcassets in Resources */,
 			);
@@ -599,7 +625,9 @@
 				65CCB0C5266B96D200866EDA /* BaseController.swift in Sources */,
 				65FDB0B2266A79B7000A3126 /* Types.swift in Sources */,
 				65CCB101266BB54C00866EDA /* NibLoadable.swift in Sources */,
+				65CCB114266BC1BE00866EDA /* ProductCell.swift in Sources */,
 				65FDB0F1266A9610000A3126 /* Constants.swift in Sources */,
+				65CCB11D266BC8D900866EDA /* Date+Utils.swift in Sources */,
 				65FDB0BA266A79D5000A3126 /* Enums.swift in Sources */,
 				65CCB0DD266B984100866EDA /* ErrorHandling.swift in Sources */,
 				65FDB0E0266A8AE2000A3126 /* ProductsResponse.swift in Sources */,

@@ -27,7 +27,9 @@ class ProductsViewModel {
     }
     
     private func update(state: ProductsDataViewState) {
-        onStateChange?(state)
+        DispatchQueue.main.async {
+            self.onStateChange?(state)
+        }
     }
     
     // MARK: - Data
@@ -36,8 +38,8 @@ class ProductsViewModel {
         return products.count
     }
     
-    func getProduct(index: Int) -> Product? {
-        return products[index]
+    func getProduct(indexPath: IndexPath) -> Product? {
+        return products[indexPath.row]
     }
     
     // MARK: - API Calls

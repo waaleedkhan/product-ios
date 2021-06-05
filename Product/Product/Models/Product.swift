@@ -1,6 +1,7 @@
 //  Created on 6/4/21.
 
 import Foundation
+import UIKit
 
 struct Product: Codable {
     
@@ -28,4 +29,27 @@ struct Product: Codable {
         
     }
 
+}
+
+// MARK: - TableView Compatible Implementation
+
+extension Product: TableViewCompatible {
+    
+    var reuseIdentifier: String {
+        return ProductCell.reuseIdentifier
+    }
+    
+    func cellForTableView(tableView: UITableView,
+                          atIndexPath indexPath: IndexPath,
+                          actionButtons: [UIButton]?) -> UITableViewCell {
+        
+        guard let cell = (tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? ProductCell)else {
+            
+            return UITableViewCell()
+        }
+        
+        cell.configureWithModel(model: self, indexPath: indexPath)
+        return cell
+    }
+    
 }
