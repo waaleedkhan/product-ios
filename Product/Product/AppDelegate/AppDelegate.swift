@@ -13,7 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = UINavigationController(rootViewController: ProductListController())
+        
+        let productListController = ProductListController(viewModel: ProductsViewModel(provider: ProductsProvider(service: ProductService())))
+        
+        // Ideally, There should be a Root Controller handling all these
+        window?.rootViewController = UINavigationController(rootViewController: productListController)
         window?.makeKeyAndVisible()
         
         return true
