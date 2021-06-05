@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,22 +19,41 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Kmm-ty-2Pm">
+                    <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                    <color key="color" name="AccentColor"/>
+                </activityIndicatorView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBi-7s-4G7">
+                    <rect key="frame" x="186" y="442.5" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="krB-gQ-bES" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="56c-C7-ruy"/>
+                <constraint firstItem="Kmm-ty-2Pm" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="67r-JB-fdC"/>
                 <constraint firstItem="krB-gQ-bES" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="G8D-eu-FSp"/>
+                <constraint firstItem="FBi-7s-4G7" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="GhA-GV-WBn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="krB-gQ-bES" secondAttribute="bottom" id="RVi-mK-pW9"/>
+                <constraint firstItem="Kmm-ty-2Pm" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="cfg-xz-Eki"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="krB-gQ-bES" secondAttribute="trailing" id="f13-PV-mXS"/>
+                <constraint firstItem="FBi-7s-4G7" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="qry-zg-DAo"/>
             </constraints>
             <connections>
+                <outlet property="activityIndicator" destination="Kmm-ty-2Pm" id="JSu-MJ-5Y5"/>
+                <outlet property="lblErrorMessage" destination="FBi-7s-4G7" id="cxH-MI-lOT"/>
                 <outlet property="tableView" destination="krB-gQ-bES" id="unV-0f-sV9"/>
             </connections>
             <point key="canvasLocation" x="-913" y="-93"/>
         </view>
     </objects>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -7,7 +7,9 @@ class ProductListView: BaseView {
     // MARK: - Outlets
     
     @IBOutlet weak var tableView: TableView!
- 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var lblErrorMessage: UILabel!
+    
     // MARK: - Members
     
     private var viewModel: ProductsViewModel?
@@ -43,19 +45,48 @@ class ProductListView: BaseView {
             }
             
             switch state {
+            case .loading:
+                self.showLoader()
             case .success:
                 self.refresh()
-                
             case .error(let error):
-                print(error?.localizedDescription ?? "")
-            default:
-                print("Default")
+                self.handleError(error: error)
+            case .productsNotFound(let message):
+                self.showError(message: message)
             }
         }
     }
     
     private func refresh() {
+        hideLoader()
+        self.tableView.isHidden = false
         self.tableView.reloadData()
+        
+        self.lblErrorMessage.isHidden = true
+    }
+    
+    // MARK: - Error Handling
+    
+    private func handleError(error: Error?) {
+        hideLoader()
+        showError(message: error?.localizedDescription ?? Strings.kMessageUnknownError)
+    }
+    
+    private func showError(message: String) {
+        tableView.isHidden = true
+
+        lblErrorMessage.isHidden = false
+        lblErrorMessage.text = message
+    }
+    
+    // MARK: - Loader handling
+    
+    private func showLoader() {
+        activityIndicator.startAnimating()
+    }
+    
+    private func hideLoader() {
+        activityIndicator.stopAnimating()
     }
     
 }

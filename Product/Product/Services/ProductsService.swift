@@ -43,6 +43,7 @@ struct ProductService {
                     completion(.success(decodedData))
                 } catch let exception {
                     print(exception)
+                    
                     completion(.failure(error))
                 }
             }.resume()
