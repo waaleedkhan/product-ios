@@ -39,6 +39,10 @@ class ProductCell: TableViewCell {
      }
     
     private func initalize() {
+        lblName.accessibilityIdentifier = "kProductCellName"
+        lblPrice.accessibilityIdentifier = "kProductCellPrice"
+        lblCreatedAt.accessibilityIdentifier = "kProductCellCreatedAt"
+        
         imageViewThumbnail.layer.cornerRadius = imageViewThumbnail.frame.size.width / 2.0
     }
 

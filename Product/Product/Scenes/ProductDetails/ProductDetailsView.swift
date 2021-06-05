@@ -27,6 +27,10 @@ class ProductDetailsView: BaseView {
         collectionViewImages.register(ProductImageCell.Nib, forCellWithReuseIdentifier: ProductImageCell.reuseIdentifier)
         collectionViewImages.dataSource = collectionViewImages
         collectionViewImages.delegate = self
+        
+        lblName.accessibilityIdentifier = "kProductDetailName"
+        lblPrice.accessibilityIdentifier = "kProductDetailPrice"
+        lblCreatedAt.accessibilityIdentifier = "kProductDetailCreatedAt"
     }
     
     // MARK: - Setup UI

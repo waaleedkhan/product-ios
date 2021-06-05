@@ -28,6 +28,7 @@ class ProductListView: BaseView {
         tableView.register(ProductCell.Nib, forCellReuseIdentifier: ProductCell.reuseIdentifier)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.accessibilityIdentifier = "kTableViewProductList"
     }
     
     func initializeData(viewModel: ProductsViewModel) {
