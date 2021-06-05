@@ -14,6 +14,10 @@ struct ProductsProvider {
         self.apiRepo = ProductsAPIRepository(service: service)
     }
     
+    init(apiRepo: ProductsAPIRepository) {
+        self.apiRepo = apiRepo
+    }
+    
     // MARK: - Provider Methods
     
     func getAllProducts(completion: @escaping ServiceResponse) {

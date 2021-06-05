@@ -32,6 +32,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="3Bl-fT-phD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="9Ld-gu-ALJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3Bl-fT-phD" secondAttribute="bottom" constant="35" id="9gK-jc-h7N"/>
                             <constraint firstItem="3xJ-vh-Lh7" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="H9p-kv-Oef"/>
                             <constraint firstItem="3xJ-vh-Lh7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bak-7z-cFl"/>

@@ -20,7 +20,7 @@ struct ProductService {
         private let serviceURL = URL(string: "\(Constants.EndPoints.baseURL)\(Constants.EndPoints.getProducts)")
         
         // MARK: - Call
-        
+        // Ideally it should be in the Service Layer
         func get() {
             guard let serviceURL = self.serviceURL else {
                 completion(.failure(nil))
@@ -56,7 +56,7 @@ struct ProductService {
 extension ProductService: ProductServicing {
     
     func getAll(completion: @escaping ServiceResponse) {
-        GetAll(completion: completion).get()
+        return GetAll(completion: completion).get()
     }
     
 }

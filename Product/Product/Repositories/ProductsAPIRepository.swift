@@ -2,7 +2,7 @@
 
 import Foundation
 
-struct ProductsAPIRepository {
+class ProductsAPIRepository: Repository {
     
     // MARK: - Members
     
@@ -14,11 +14,7 @@ struct ProductsAPIRepository {
         self.service = service
     }
     
-}
-
-// MARK: - Repository Implementation
-
-extension ProductsAPIRepository: Repository {
+    // MARK: - Repository Implementation
     
     func get(by: Int) -> Product? { return nil }
     
