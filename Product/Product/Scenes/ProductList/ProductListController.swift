@@ -36,4 +36,11 @@ class ProductListController: BaseController {
         (view as? ProductListView)?.initializeData(viewModel: viewModel)
     }
     
+    // MARK: - Navigation
+    
+    func showDetails(product: Product) {
+        let details = ProductDetailsController(product: product)
+        self.navigationController?.pushViewController(details, animated: true)
+    }
+    
 }

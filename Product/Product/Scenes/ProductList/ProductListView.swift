@@ -119,4 +119,14 @@ extension ProductListView: UITableViewDelegate {
         return kCellHeight
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        guard let product = viewModel?.getProduct(indexPath: indexPath) else {
+            return
+        }
+        
+        (controller as? ProductListController)?.showDetails(product: product)
+    }
+    
 }

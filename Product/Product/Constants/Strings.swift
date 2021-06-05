@@ -8,4 +8,8 @@ struct Strings {
     static let kTitleProducts = "Products"
     static let kMessageUnknownError = "Failed to Load Products. Unknown Error Occured"
     
+    static let kTitleName = "Name"
+    static let kTitlePrice = "Price"
+    static let kTitleCreatedAt = "Created At"
+    
 }

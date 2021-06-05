@@ -5,3 +5,4 @@ import UIKit
 
 typealias ServiceResponse = (Result) -> Void
 typealias TableViewCell = UITableViewCell & NibLoadable & ReusableView & TableViewCellProtocol
+typealias CollectionViewCell = UICollectionViewCell & NibLoadable & ReusableView & TableViewCellProtocol
