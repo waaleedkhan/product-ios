@@ -5,5 +5,6 @@ import Foundation
 struct Strings {
     
     static let kMessageNoProductsFound = "No Products Found"
+    static let kTitleProducts = "Products"
     
 }
