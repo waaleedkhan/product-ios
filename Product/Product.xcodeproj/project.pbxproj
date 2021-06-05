@@ -28,6 +28,8 @@
 		65CCB114266BC1BE00866EDA /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CCB112266BC1BE00866EDA /* ProductCell.swift */; };
 		65CCB115266BC1BE00866EDA /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65CCB113266BC1BE00866EDA /* ProductCell.xib */; };
 		65CCB11D266BC8D900866EDA /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CCB11C266BC8D900866EDA /* Date+Utils.swift */; };
+		65CCB125266BD4CB00866EDA /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CCB123266BD4CB00866EDA /* ImageCache.swift */; };
+		65CCB126266BD4CB00866EDA /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CCB124266BD4CB00866EDA /* ImageLoader.swift */; };
 		65FDB0A9266A76A6000A3126 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FDB0A8266A76A6000A3126 /* Repository.swift */; };
 		65FDB0B2266A79B7000A3126 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FDB0B1266A79B7000A3126 /* Types.swift */; };
 		65FDB0BA266A79D5000A3126 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FDB0B9266A79D5000A3126 /* Enums.swift */; };
@@ -93,6 +95,8 @@
 		65CCB112266BC1BE00866EDA /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		65CCB113266BC1BE00866EDA /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		65CCB11C266BC8D900866EDA /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
+		65CCB123266BD4CB00866EDA /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		65CCB124266BD4CB00866EDA /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		65FDB0A8266A76A6000A3126 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		65FDB0B1266A79B7000A3126 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		65FDB0B9266A79D5000A3126 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 				65CCB0FA266BB48600866EDA /* Components */,
 				65FDB0B0266A79AA000A3126 /* Constants */,
 				65FDB0F5266A994A000A3126 /* Extenstions */,
+				65CCB121266BD4B100866EDA /* External */,
 				65FDB0D2266A7BAC000A3126 /* Models */,
 				65FDB0BE266A79FF000A3126 /* Protocols */,
 				65FDB0C7266A7AB5000A3126 /* Providers */,
@@ -281,6 +286,23 @@
 				65CCB113266BC1BE00866EDA /* ProductCell.xib */,
 			);
 			path = ProductCell;
+			sourceTree = "<group>";
+		};
+		65CCB121266BD4B100866EDA /* External */ = {
+			isa = PBXGroup;
+			children = (
+				65CCB122266BD4BD00866EDA /* Image */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		65CCB122266BD4BD00866EDA /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				65CCB123266BD4CB00866EDA /* ImageCache.swift */,
+				65CCB124266BD4CB00866EDA /* ImageLoader.swift */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 		65FDB0A7266A7684000A3126 /* Repositories */ = {
@@ -611,6 +633,7 @@
 				65CCB0E6266B9BB900866EDA /* ProductListView.swift in Sources */,
 				65FDB0F7266A996C000A3126 /* Codable+Helper.swift in Sources */,
 				65FDB0C9266A7AC5000A3126 /* ProductsProvider.swift in Sources */,
+				65CCB126266BD4CB00866EDA /* ImageLoader.swift in Sources */,
 				65FDB102266AAF14000A3126 /* Strings.swift in Sources */,
 				65CCB0C4266B96D200866EDA /* BaseView.swift in Sources */,
 				65CCB0CA266B976400866EDA /* ViewLifeCycle.swift in Sources */,
@@ -634,6 +657,7 @@
 				65CCB0E5266B9BB900866EDA /* ProductListController.swift in Sources */,
 				65FDB0D4266A7BBA000A3126 /* Product.swift in Sources */,
 				65FDB0C0266A7A12000A3126 /* ErrorConvertible.swift in Sources */,
+				65CCB125266BD4CB00866EDA /* ImageCache.swift in Sources */,
 				65FDB0A9266A76A6000A3126 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
