@@ -71,6 +71,7 @@ class ProductsViewModel {
             return
         }
         
+        self.products = products
         update(state: .success)
     }
     

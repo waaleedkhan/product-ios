@@ -23,7 +23,9 @@ class ProductListView: BaseView {
     // MARK: - Initialize
     
     private func initalizeTableView() {
-        
+        tableView.register(ProductCell.Nib, forCellReuseIdentifier: ProductCell.reuseIdentifier)
+        tableView.dataSource = self
+        tableView.delegate = self
     }
     
     func initializeData(viewModel: ProductsViewModel) {
