@@ -15,7 +15,7 @@ struct Constants {
     
     enum Format: String {
         
-        case apiDateFormat = ""
+        case apiDateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
         
     }
 }

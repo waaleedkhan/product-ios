@@ -8,7 +8,7 @@ struct ProductsResponse: Codable {
     
     // MARK: - Members
     
-    let result: [Product]
+    let results: [Product]
     let pagination: Page
     
 }

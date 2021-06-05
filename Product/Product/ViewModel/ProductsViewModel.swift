@@ -15,10 +15,10 @@ class ProductsViewModel {
     
     // MARK: - Members
     
-    let provider: ProductsProvider
+    private let provider: ProductsProvider
     var onStateChange: ((ProductsDataViewState) -> Void)?
     
-    var products = [Product]()
+    private var products = [Product]()
     
     // MARK: - Life Cycle Methods
     
@@ -28,6 +28,16 @@ class ProductsViewModel {
     
     private func update(state: ProductsDataViewState) {
         onStateChange?(state)
+    }
+    
+    // MARK: - Data
+    
+    func getNumberOfProducts() -> Int {
+        return products.count
+    }
+    
+    func getProduct(index: Int) -> Product? {
+        return products[index]
     }
     
     // MARK: - API Calls
@@ -46,9 +56,9 @@ class ProductsViewModel {
     // MARK: - API Callbacks
     
     func getProductsSuccess(response: Decodable?) {
-        let stateProductNotFound = ProductsDataViewState.productsNotFound(message: "")
+        let stateProductNotFound = ProductsDataViewState.productsNotFound(message: Strings.kMessageNoProductsFound)
         
-        guard let products = (response as? ProductsResponse)?.result else {
+        guard let products = (response as? ProductsResponse)?.results else {
             update(state: stateProductNotFound)
     
             return

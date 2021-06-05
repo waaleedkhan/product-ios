@@ -10,7 +10,7 @@ struct ProductsProvider {
     
     // MARK: - Life Cycle Methods
     
-    init(service: ProductService) {
+    init(service: ProductServicing) {
         self.apiRepo = ProductsAPIRepository(service: service)
     }
     

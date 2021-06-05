@@ -41,7 +41,8 @@ struct ProductService {
                 do {
                     let decodedData = try ProductsResponse.decode(data: unwrapData)
                     completion(.success(decodedData))
-                } catch {
+                } catch let exception {
+                    print(exception)
                     completion(.failure(error))
                 }
             }.resume()
