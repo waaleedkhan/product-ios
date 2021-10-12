@@ -36,6 +36,8 @@ class ProductCell: TableViewCell {
         imageViewThumbnail.alpha = 0.0
         animator?.stopAnimation(true)
         cancellable?.cancel()
+        print("This is a Feat commit")
+        
      }
     
     private func initalize() {
